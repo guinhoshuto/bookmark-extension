@@ -1,14 +1,10 @@
-const form = document.querySelector('form')
+const form = document.querySelector('form');
 
-//adiciona
-chrome.devtools.network.onRequestFinished.addListener(
-  function(request) {
-    if (request.response.bodySize > 40*1024) {
-      chrome.devtools.inspectedWindow.eval(
-          'console.log(request.request.url)');
-    }
-  }
-);
+(() => {
+  chrome.runtime.onMessage.addListener((obj, sender, response) => {
+    console.log(obj)
+  })
+})();
 
 //salva o webhook
 form.addEventListener('submit', (event) => {

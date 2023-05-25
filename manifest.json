@@ -4,8 +4,26 @@
     "version": "1.0",
     "manifest_version": 3,
     "author": "guinho.shuto@gmail.com",
-    "permissions": ["activeTab", "scripting", "storage"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+       {
+        "matches": ["https://*.twitter.com/*"],
+        "js": ["twitter.js"]
+       } 
+    ],
+    "permissions": [
+        "activeTab", 
+        "webRequest",
+        "scripting", 
+        "storage",
+        "tabs"
+    ],
     "action": {
         "default_popup": "index.html"
-    }
+    },
+    "host_permissions": [
+        "*://*.twitter.com/"
+    ]
 }

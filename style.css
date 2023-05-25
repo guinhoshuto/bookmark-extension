@@ -6,6 +6,10 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+body{
+    background: transparent;
+}
+
 form{
     background: #e2f4e3;
     display:flex;
@@ -14,6 +18,7 @@ form{
     padding: 32px 20px;
     align-items: center;
     gap: 24px;
+    border-radius: 20px;
 }
 
 form>div{
@@ -42,6 +47,7 @@ button{
     padding: 8px 12px;
     color: white;
     transition: all .5s;
+    margin-bottom: 20px;
 }
 
 button:hover{
