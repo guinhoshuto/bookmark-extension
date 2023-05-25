@@ -1,0 +1,11 @@
+{
+    "name": "Tweet webhook",
+    "description": "Just a webhook sender",
+    "version": "1.0",
+    "manifest_version": 3,
+    "author": "guinho.shuto@gmail.com",
+    "permissions": ["activeTab", "scripting", "storage"],
+    "action": {
+        "default_popup": "index.html"
+    }
+}
